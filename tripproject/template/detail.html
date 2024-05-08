@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<img src="{{movie.img.url}}"  width="150" height="=150">
+<h6>{{movie.name}}<br></h6>
+<h5>{{movie.desc}}<br></h5>
+<h6>{{movie.year}}</h6>
+<h5>{{movie.link}}</h5>
+<h5>{{movie.review_text}}</h5>
+<h5>{{movie.score}}</h5>
+<a  class="btn btn-warning" href="{% url 'capp:update' movie.id %}">update</a>
+<a  class="btn btn-danger" href="{% url 'capp:delete' movie.id %}">delete</a>
+{% endblock %}
